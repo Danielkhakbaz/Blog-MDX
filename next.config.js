@@ -1,12 +1,11 @@
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
+const withMDX = require("@next/mdx")();
 
 const nextConfig = {
   swcMinify: true,
   experimental: {
     ppr: true,
   },
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
 };
 
-module.exports = withBundleAnalyzer(nextConfig);
+module.exports = withMDX(nextConfig);

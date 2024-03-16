@@ -1,5 +1,5 @@
 const NotFound = async () => {
-  return <></>;
+  return <>404</>;
 };
 
 export default NotFound;
